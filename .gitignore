@@ -1,0 +1,18 @@
+# Secrets / environment — never commit
+.env
+.env.*
+*.key
+*.pem
+credentials*
+secrets*
+
+# Build / scratch
+tmp/
+*.log
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

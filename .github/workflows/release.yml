@@ -1,0 +1,42 @@
+---
+# Automated release + changelog via release-please. Conventional Commits on
+# `main` drive a maintained release PR that bumps the version (in
+# .release-please-manifest.json and, via extra-files, .claude-plugin/plugin.json)
+# and regenerates CHANGELOG.md. Merging that PR tags the release and publishes
+# a GitHub Release. Config: release-please-config.json + .release-please-manifest.json.
+name: release-please
+
+"on":
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions: {}
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Mint GitHub App installation token
+        # release-please-action creates commits via the REST API (Octokit), not
+        # `git commit` on the runner — so any runner-side signing config is
+        # bypassed. A GitHub App installation token is the only REST-auth path
+        # that produces commits which are both (a) auto-signed by GitHub's
+        # verified infrastructure (satisfying required_signatures) and (b) able
+        # to trigger downstream pull_request workflows (the built-in
+        # github.token is suppressed by GitHub's workflow loop-prevention,
+        # leaving required checks permanently pending).
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.RELEASE_PLEASE_APP_ID }}
+          private-key: ${{ secrets.RELEASE_PLEASE_APP_PRIVATE_KEY }}
+
+      - name: Run release-please
+        uses: googleapis/release-please-action@v4
+        with:
+          token: ${{ steps.app-token.outputs.token }}
+...

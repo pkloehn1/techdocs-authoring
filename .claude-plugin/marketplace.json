@@ -1,0 +1,27 @@
+{
+  "name": "techdocs-authoring",
+  "owner": {
+    "name": "Pete Kloehn"
+  },
+  "description": "Single-plugin marketplace publishing techdocs-authoring: a technical-writer subagent + documentation-authoring reference skill for writing and reviewing technical docs.",
+  "plugins": [
+    {
+      "name": "techdocs-authoring",
+      "source": "./",
+      "description": "Portable documentation-authoring craft: style-guide selection, the technical-writing type taxonomy and the Diataxis four-mode model, templates and checklists for README/how-to/tutorial/reference/ADR/runbook/release-notes, single-sourcing and content reuse, the writing process (BLUF, seven steps), and docs that serve both humans and AI agents.",
+      "category": "documentation",
+      "tags": [
+        "technical-writing",
+        "documentation",
+        "docs-as-code",
+        "diataxis",
+        "style-guide",
+        "readme",
+        "runbook",
+        "adr",
+        "release-notes",
+        "agent-skills"
+      ]
+    }
+  ]
+}
