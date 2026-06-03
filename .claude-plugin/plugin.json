@@ -1,7 +1,7 @@
 {
   "name": "techdocs-authoring",
   "description": "Technical-writer subagent + documentation-authoring reference skill for writing and reviewing READMEs, how-tos, tutorials, reference, ADRs, runbooks, and release notes. Portable and Agent-Skills-conformant; covers style-guide selection, the Diataxis four-mode model, templates and checklists, single-sourcing, the writing process, and docs that serve both humans and AI agents. Use for any documentation authoring or doc-review work.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "Pete Kloehn"
   },

@@ -4,6 +4,13 @@ All notable changes to this plugin are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project
 adheres to [Semantic Versioning](https://semver.org).
 
+## [0.2.0](https://github.com/pkloehn1/techdocs-authoring/compare/v0.1.0...v0.2.0) (2026-06-03)
+
+
+### Features
+
+* initial techdocs-authoring plugin — technical-writer agent + authoring-reference skill ([ea69516](https://github.com/pkloehn1/techdocs-authoring/commit/ea695168e8060a1d9ef804a6dafa1f8290ebf85a))
+
 ## [0.1.0] - 2026-06-02
 
 ### Added
