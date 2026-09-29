@@ -23,6 +23,14 @@ page **declares one mode and holds it**; reviewers reject cross-quadrant
 content (see the invariants in `../SKILL.md`). When a page wants to be two
 modes, it is two pages — split it and cross-link.
 
+The four modes classify **pages**. A commit message, an issue body, a
+change-request description, a review comment and a code comment are none of
+them, and asking which quadrant a three-line comment occupies has no useful
+answer. Their rules are in
+[writing-process.md](writing-process.md#short-constrained-formats) and
+[templates-and-checklists.md](templates-and-checklists.md) — reach for those
+rather than concluding the artifact is out of scope.
+
 ## Mode-by-mode rules
 
 - **Tutorial** — learning-oriented and author-owned. Reproducible, no choices or
