@@ -28,6 +28,18 @@ Reference and playbook for writing and reviewing technical documentation. This
 file is the index; load a reference file only when a task needs it (progressive
 disclosure).
 
+## Persistence
+
+These rules govern every piece of prose in a session, not only the first. The
+failure mode is not disagreement — it is writing hours later without
+consulting them, because writing rarely feels like an act that needs a
+reference. A commit body, a ticket field and a review comment are each
+governed here, and each is where the drift starts.
+
+So the moment to reach for this is *before* writing or amending, not after:
+name the artifact, then check the matching checklist. Already drafting without
+having done that? Stop and do it — one lookup now, or a rewrite later.
+
 - Pick a canonical style guide and the highest-agreement mechanical rules
   (voice, mechanics, screenshots/media) → [references/style-guide.md](references/style-guide.md)
 - The Diataxis four-mode model and how to choose one mode per page
