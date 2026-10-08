@@ -170,23 +170,25 @@ Checklist:
 ## Code comment (no mode)
 
 A code comment sits beside the code it explains, so the code is the context.
-Say only what the code cannot.
+Say only what the code cannot. A script's header comment is its README and
+takes that checklist.
 
 ```text
-<The constraint, reason, or hazard the code cannot show>.
+<The reason, constraint, hazard, or meaning the code cannot show>.
 <Link to the decision or issue, if one exists>.
 ```
 
 Checklist:
 
-- States why, never what; the identifiers already say what.
-- Does one job: explain a reason, or describe an interface. A comment that
-  also instructs the caller is two comments.
+- Adds what the identifiers cannot say: a reason, a constraint, a hazard, or
+  what a literal means. A paraphrase of the code is deleted.
+- Explains or describes; it never instructs. A step the reader must take
+  belongs in a how-to, or in code that enforces it.
 - Matches the length and voice of the comments beside it.
 - Links to the issue or decision instead of retelling it, and carries no dates
   or ticket history.
 - Changes in the same commit as the code it describes.
-- Deletes commented-out code; version control keeps it.
+- Is prose, not commented-out code; version control keeps the old code.
 
 ## Review comment (no mode)
 
@@ -200,7 +202,7 @@ Checklist:
 
 - Opens with the requested change; the reason follows.
 - Marks itself blocking or optional.
-- Raises one point and names the line or symbol it concerns.
+- Raises one point, anchored to the line or symbol it concerns.
 - Addresses the code, not the author.
 - Links to the rule instead of restating it.
 - Asks a question only when the answer changes the verdict.
