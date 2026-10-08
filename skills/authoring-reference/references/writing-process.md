@@ -37,9 +37,10 @@ make that the title or opening line.
 
 For commit bodies, ticket fields, and summary blocks, order the content as:
 bottom line, then impact, then next steps, then details. The reader gets the
-decision first and the supporting detail last. Code comments and review
-comments have their own skeletons in
-[templates-and-checklists.md](templates-and-checklists.md#code-comment-no-mode).
+decision first and the supporting detail last. The
+[code comment](templates-and-checklists.md#code-comment-no-mode) and the
+[review comment](templates-and-checklists.md#review-comment-no-mode) have
+their own skeletons.
 
 ## The editing pass
 
