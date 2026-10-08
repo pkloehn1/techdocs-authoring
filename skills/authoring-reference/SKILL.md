@@ -46,6 +46,7 @@ having done that? Stop and do it — one lookup now, or a rewrite later.
   → [references/doc-types-and-diataxis.md](references/doc-types-and-diataxis.md)
 - Copy-paste section skeletons + reviewer checklists for the seven core
   artifacts (README, how-to, tutorial, reference, ADR, runbook, release notes)
+  and for the code comment and review comment
   → [references/templates-and-checklists.md](references/templates-and-checklists.md)
 - When and how to reuse content (single-sourcing, DITA tiers, change-impact)
   → [references/single-sourcing-and-reuse.md](references/single-sourcing-and-reuse.md)

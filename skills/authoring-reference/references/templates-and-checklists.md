@@ -2,7 +2,8 @@
 
 One copy-paste skeleton plus one reviewer checklist per core artifact. Each is
 labeled with its Diataxis mode. The skeletons show structure; fill them in your
-repo's voice and conventions.
+repo's voice and conventions. The last two entries cover short-form artifacts
+that belong to no mode.
 
 ## README (how-to-shaped front door)
 
@@ -165,3 +166,41 @@ Checklist:
   [SemVer](https://semver.org/) version bumps.
 - Written for the reader (what changed and the impact), not raw commit subjects.
 - A **Deprecated** section warns before a future **Removed**.
+
+## Code comment (no mode)
+
+A code comment sits beside the code it explains, so the code is the context.
+Say only what the code cannot.
+
+```text
+<The constraint, reason, or hazard the code cannot show>.
+<Link to the decision or issue, if one exists>.
+```
+
+Checklist:
+
+- States why, never what; the identifiers already say what.
+- Does one job: explain a reason, or describe an interface. A comment that
+  also instructs the caller is two comments.
+- Matches the length and voice of the comments beside it.
+- Links to the issue or decision instead of retelling it, and carries no dates
+  or ticket history.
+- Changes in the same commit as the code it describes.
+- Deletes commented-out code; version control keeps it.
+
+## Review comment (no mode)
+
+```text
+<Blocking | Optional>: <the change you want>.
+Why: <the consequence, or a link to the rule>.
+Suggestion: <a concrete alternative, if you have one>.
+```
+
+Checklist:
+
+- Opens with the requested change; the reason follows.
+- Marks itself blocking or optional.
+- Raises one point and names the line or symbol it concerns.
+- Addresses the code, not the author.
+- Links to the rule instead of restating it.
+- Asks a question only when the answer changes the verdict.

@@ -7,10 +7,10 @@ conformant with the open [Agent Skills](https://agentskills.io) specification.
 It is built for *writing and reviewing* technical docs: picking a canonical
 style guide, classifying each doc with the Diataxis four-mode model, applying
 templates and reviewer checklists for READMEs, how-tos, tutorials, reference,
-ADRs, runbooks, and release notes, single-sourcing content, running a disciplined
-writing process, and making docs serve both humans and AI agents. The subagent
-drafts and reviews in its own context, so doc-heavy work doesn't flood your main
-session.
+ADRs, runbooks, release notes, and code and review comments, single-sourcing
+content, running a disciplined writing process, and making docs serve both
+humans and AI agents. The subagent drafts and reviews in its own context, so
+doc-heavy work doesn't flood your main session.
 
 ## What's inside
 
