@@ -2,12 +2,17 @@
 name: authoring-reference
 description: >-
   Use when writing, structuring, or reviewing any README, how-to, tutorial,
-  reference, ADR, runbook, release notes, or AI-agent-readable docs. Reference
-  knowledge and an authoring playbook for technical documentation: picking a
-  canonical style guide, the Diataxis four-mode model (tutorial/how-to/
-  reference/explanation), copy-paste templates and reviewer checklists,
-  single-sourcing and content reuse, a writing process that leads with the
-  bottom line, and writing docs that serve both humans and AI agents.
+  reference, ADR, runbook, release notes, or AI-agent-readable docs. Use it as
+  well for every short-form artifact: a commit message, an issue body, a
+  change-request description, a review comment, or a code comment. Reach for it
+  on those five even when the writing looks too small to need help, because
+  short prose is where this skill is skipped and where the writing goes wrong;
+  each one has a skeleton and a reviewer checklist. Reference knowledge and an
+  authoring playbook for technical documentation: picking a canonical style
+  guide, the Diataxis four-mode model (tutorial/how-to/reference/explanation),
+  copy-paste templates and reviewer checklists, single-sourcing and content
+  reuse, a writing process that leads with the bottom line, and writing docs
+  that serve both humans and AI agents.
 license: MIT
 compatibility: >-
   Vendor- and tool-neutral. Defaults to the Microsoft / Google / Apple style
