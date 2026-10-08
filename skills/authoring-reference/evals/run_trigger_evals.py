@@ -213,6 +213,9 @@ def main() -> int:
     ap.add_argument("--timeout", type=int, default=60)
     ap.add_argument("--holdout", type=float, default=0.4)
     ap.add_argument("--out", default=None, help="write the summary as JSON")
+    ap.add_argument("--description", default=None,
+                    help="measure this description instead of the skill's "
+                         "current one, for a before-and-after on one split")
     ap.add_argument("--no-isolate", action="store_true",
                     help="keep the ambient config, hooks and plugins; the rate "
                          "then measures nothing if a hook preloads the skill")
@@ -220,7 +223,12 @@ def main() -> int:
 
     eval_set = json.loads(Path(args.eval_set).read_text(encoding="utf-8"))
     name, description = parse_skill(Path(args.skill_path))
+    if args.description:
+        description = Path(args.description).read_text(encoding="utf-8").strip() \
+            if Path(args.description).exists() else args.description
     train, test = split(eval_set, args.holdout) if args.holdout else (eval_set, [])
+    print(f"description: {len(description)} chars, "
+          f"opens '{description[:48]}...'")
 
     if shutil.which("claude") is None:
         print("claude CLI not on PATH", file=sys.stderr)
