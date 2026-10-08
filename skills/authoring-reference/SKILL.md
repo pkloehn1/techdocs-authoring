@@ -2,12 +2,17 @@
 name: authoring-reference
 description: >-
   Use when writing, structuring, or reviewing any README, how-to, tutorial,
-  reference, ADR, runbook, release notes, or AI-agent-readable docs. Reference
-  knowledge and an authoring playbook for technical documentation: picking a
-  canonical style guide, the Diataxis four-mode model (tutorial/how-to/
-  reference/explanation), copy-paste templates and reviewer checklists,
-  single-sourcing and content reuse, a writing process that leads with the
-  bottom line, and writing docs that serve both humans and AI agents.
+  reference, ADR, runbook, release notes, or AI-agent-readable docs. Use it as
+  well for every short-form artifact: a commit message, an issue body, a
+  change-request description, a review comment, or a code comment. Reach for it
+  on those five even when the writing looks too small to need help, because
+  short prose is where this skill is skipped and where the writing goes wrong;
+  each one has a skeleton and a reviewer checklist. Reference knowledge and an
+  authoring playbook for technical documentation: picking a canonical style
+  guide, the Diataxis four-mode model (tutorial/how-to/reference/explanation),
+  copy-paste templates and reviewer checklists, single-sourcing and content
+  reuse, a writing process that leads with the bottom line, and writing docs
+  that serve both humans and AI agents.
 license: MIT
 compatibility: >-
   Vendor- and tool-neutral. Defaults to the Microsoft / Google / Apple style
@@ -46,6 +51,8 @@ having done that? Stop and do it — one lookup now, or a rewrite later.
   → [references/doc-types-and-diataxis.md](references/doc-types-and-diataxis.md)
 - Copy-paste section skeletons + reviewer checklists for the seven core
   artifacts (README, how-to, tutorial, reference, ADR, runbook, release notes)
+  and for the five short-form artifacts (commit message, issue body,
+  change-request description, review comment, code comment)
   → [references/templates-and-checklists.md](references/templates-and-checklists.md)
 - When and how to reuse content (single-sourcing, DITA tiers, change-impact)
   → [references/single-sourcing-and-reuse.md](references/single-sourcing-and-reuse.md)
