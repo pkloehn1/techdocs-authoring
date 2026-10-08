@@ -16,3 +16,7 @@ Thumbs.db
 *.swp
 .idea/
 .vscode/
+
+# Python bytecode from the eval runner
+__pycache__/
+*.pyc
