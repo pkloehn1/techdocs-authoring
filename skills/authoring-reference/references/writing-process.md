@@ -37,10 +37,14 @@ make that the title or opening line.
 
 For commit bodies, ticket fields, and summary blocks, order the content as:
 bottom line, then impact, then next steps, then details. The reader gets the
-decision first and the supporting detail last. The
-[code comment](templates-and-checklists.md#code-comment-no-mode) and the
-[review comment](templates-and-checklists.md#review-comment-no-mode) have
-their own skeletons.
+decision first and the supporting detail last.
+
+Each short-form artifact has its own skeleton and checklist: the
+[commit message](templates-and-checklists.md#commit-message-no-mode), the
+[issue body](templates-and-checklists.md#issue-body-no-mode), the
+[change-request description](templates-and-checklists.md#change-request-description-no-mode),
+the [review comment](templates-and-checklists.md#review-comment-no-mode), and
+the [code comment](templates-and-checklists.md#code-comment-no-mode).
 
 ## The editing pass
 

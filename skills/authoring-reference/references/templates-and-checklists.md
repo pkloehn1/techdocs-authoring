@@ -2,7 +2,7 @@
 
 One copy-paste skeleton plus one reviewer checklist per core artifact. Each is
 labeled with its Diataxis mode. The skeletons show structure; fill them in your
-repo's voice and conventions. The last two entries cover short-form artifacts
+repo's voice and conventions. The last five entries cover short-form artifacts
 that belong to no mode.
 
 ## README (how-to-shaped front door)
@@ -169,9 +169,18 @@ Checklist:
 
 ## Code comment (no mode)
 
-A code comment sits beside the code it explains, so the code is the context.
-Say only what the code cannot. A script's header comment is its README and
-takes that checklist.
+A code comment never explains the code. It supplies the purpose an uninformed
+reader cannot derive from reading the code inline.
+
+Adopt the canonical rule rather than invent one.
+[Google's code-review guidance](https://google.github.io/eng-practices/review/reviewer/looking-for.html)
+states it: comments "explain why some code exists, and should not be explaining
+what some code is doing", and "if the code isn't clear enough to explain
+itself, then the code should be made simpler". It names one exception, and that
+exception is real — a regular expression or a complex algorithm earns a comment
+saying what it does.
+
+A script's header comment is its README and takes that checklist.
 
 ```text
 <The reason, constraint, hazard, or meaning the code cannot show>.
@@ -182,8 +191,9 @@ Checklist:
 
 - Adds what the identifiers cannot say: a reason, a constraint, a hazard, or
   what a literal means. A paraphrase of the code is deleted.
-- Explains or describes; it never instructs. A step the reader must take
-  belongs in a how-to, or in code that enforces it.
+- Explains or describes; it never instructs the reader to act outside the code.
+  Describing the code in imperative voice is still description. A step the
+  reader must take belongs in a how-to, or in code that enforces it.
 - Matches the length and voice of the comments beside it.
 - Links to the issue or decision instead of retelling it, and carries no dates
   or ticket history.
@@ -206,3 +216,68 @@ Checklist:
 - Addresses the code, not the author.
 - Links to the rule instead of restating it.
 - Asks a question only when the answer changes the verdict.
+
+The three bodies below share the ordering in
+[Short, constrained formats](writing-process.md#short-constrained-formats):
+bottom line, impact, next steps, details.
+
+## Commit message (no mode)
+
+```text
+<type>(<scope>): <subject, imperative, no trailing period>
+
+<Why the change exists, and what it costs.>
+<Link to the issue.>
+```
+
+Checklist:
+
+- Says in the body what the diff cannot show: why the change exists.
+- States the cost or the trade accepted, not only the win.
+- Carries no file list, no account of the session, and no dates or build
+  numbers.
+- Links the issue rather than restating it.
+- Describes the change, never the author's process.
+
+## Issue body (no mode)
+
+```text
+## Problem
+<What is wrong, and the evidence for it.>
+
+## Cost
+<What it breaks or risks while it stands.>
+
+## Proposed
+<The change, or the decision being asked for.>
+
+## Acceptance criteria
+- [ ] <Checkable the day the issue closes.>
+```
+
+Checklist:
+
+- Opens with the problem and its evidence, not with the fix.
+- Every criterion is checkable the day the issue closes; work that lands later
+  is a deliverable instead.
+- Takes the destination's template sections when it has one, and invents none.
+- Quotes the artifact it describes rather than paraphrasing intent.
+- Links related issues instead of restating them.
+
+## Change-request description (no mode)
+
+```text
+<The destination template's sections, in its order.>
+
+<Summary: the state the branch is in.>
+<Linked issues: the closing keyword, or a plain reference.>
+```
+
+Checklist:
+
+- Takes the template's sections only; invents none.
+- States the branch as it stands, not the order the work happened in.
+- Derives the commit list from the repository rather than typing it.
+- Claims to close an issue only when that issue's criteria are met; otherwise
+  references it.
+- Names what reviewers must check that the pipeline cannot.
