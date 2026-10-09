@@ -5,6 +5,18 @@
       "release-type": "simple",
       "include-component-in-tag": false,
       "changelog-path": "CHANGELOG.md",
+      "changelog-sections": [
+        { "type": "feat", "section": "Features" },
+        { "type": "fix", "section": "Bug Fixes" },
+        { "type": "perf", "section": "Performance" },
+        { "type": "docs", "section": "Documentation" },
+        { "type": "test", "section": "Evals and tests" },
+        { "type": "ci", "section": "Build and CI" },
+        { "type": "refactor", "section": "Refactoring" },
+        { "type": "revert", "section": "Reverts" },
+        { "type": "chore", "section": "Chores", "hidden": true },
+        { "type": "style", "section": "Styling", "hidden": true }
+      ],
       "extra-files": [
         {
           "type": "json",
