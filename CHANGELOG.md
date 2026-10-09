@@ -4,6 +4,14 @@ All notable changes to this plugin are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project
 adheres to [Semantic Versioning](https://semver.org).
 
+## [0.3.0](https://github.com/pkloehn1/techdocs-authoring/compare/v0.2.0...v0.3.0) (2026-10-09)
+
+
+### Features
+
+* finish the short-form artifact set and enforce one artifact list ([932073e](https://github.com/pkloehn1/techdocs-authoring/commit/932073e67a2508fa84767efbd236dd0779e28976))
+* **validate:** make the artifact list one source and enforce the rest agree ([8b80014](https://github.com/pkloehn1/techdocs-authoring/commit/8b80014463d3220c7669dbaac78769af11e46c14))
+
 ## [0.2.0](https://github.com/pkloehn1/techdocs-authoring/compare/v0.1.0...v0.2.0) (2026-06-03)
 
 
