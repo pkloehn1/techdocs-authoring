@@ -4,6 +4,14 @@ All notable changes to this plugin are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project
 adheres to [Semantic Versioning](https://semver.org).
 
+## [0.3.1](https://github.com/pkloehn1/techdocs-authoring/compare/v0.3.0...v0.3.1) (2026-10-09)
+
+
+### Build and CI
+
+* **release:** put docs, tests and CI work in the changelog ([ac51fa4](https://github.com/pkloehn1/techdocs-authoring/commit/ac51fa4c6342e79e8e4b3642b9dc103c5eeabf4e))
+* **release:** put docs, tests and CI work in the changelog ([bffba5d](https://github.com/pkloehn1/techdocs-authoring/commit/bffba5dd171716ca61b1db9758a9993514ec88ca))
+
 ## [0.3.0](https://github.com/pkloehn1/techdocs-authoring/compare/v0.2.0...v0.3.0) (2026-10-09)
 
 
