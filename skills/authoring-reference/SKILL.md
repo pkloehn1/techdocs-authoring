@@ -2,12 +2,17 @@
 name: authoring-reference
 description: >-
   Use when writing, structuring, or reviewing any README, how-to, tutorial,
-  reference, ADR, runbook, release notes, or AI-agent-readable docs. Reference
-  knowledge and an authoring playbook for technical documentation: picking a
-  canonical style guide, the Diataxis four-mode model (tutorial/how-to/
-  reference/explanation), copy-paste templates and reviewer checklists,
-  single-sourcing and content reuse, a writing process that leads with the
-  bottom line, and writing docs that serve both humans and AI agents.
+  reference, ADR, runbook, release notes, or AI-agent-readable docs. Use it as
+  well for every short-form artifact: a commit message, an issue body, a
+  change-request description, a review comment, or a code comment. Reach for it
+  on those five even when the writing looks too small to need help, because
+  short prose is where this skill is skipped and where the writing goes wrong;
+  each one has a skeleton and a reviewer checklist. Reference knowledge and an
+  authoring playbook for technical documentation: picking a canonical style
+  guide, the Diataxis four-mode model (tutorial/how-to/reference/explanation),
+  copy-paste templates and reviewer checklists, single-sourcing and content
+  reuse, a writing process that leads with the bottom line, and writing docs
+  that serve both humans and AI agents.
 license: MIT
 compatibility: >-
   Vendor- and tool-neutral. Defaults to the Microsoft / Google / Apple style
@@ -28,12 +33,26 @@ Reference and playbook for writing and reviewing technical documentation. This
 file is the index; load a reference file only when a task needs it (progressive
 disclosure).
 
+## Persistence
+
+These rules govern every piece of prose in a session, not only the first. The
+failure mode is not disagreement — it is writing hours later without
+consulting them, because writing rarely feels like an act that needs a
+reference. A commit body, a ticket field and a review comment are each
+governed here, and each is where the drift starts.
+
+So the moment to reach for this is *before* writing or amending, not after:
+name the artifact, then check the matching checklist. Already drafting without
+having done that? Stop and do it — one lookup now, or a rewrite later.
+
 - Pick a canonical style guide and the highest-agreement mechanical rules
   (voice, mechanics, screenshots/media) → [references/style-guide.md](references/style-guide.md)
 - The Diataxis four-mode model and how to choose one mode per page
   → [references/doc-types-and-diataxis.md](references/doc-types-and-diataxis.md)
 - Copy-paste section skeletons + reviewer checklists for the seven core
   artifacts (README, how-to, tutorial, reference, ADR, runbook, release notes)
+  and for the five short-form artifacts (commit message, issue body,
+  change-request description, review comment, code comment)
   → [references/templates-and-checklists.md](references/templates-and-checklists.md)
 - When and how to reuse content (single-sourcing, DITA tiers, change-impact)
   → [references/single-sourcing-and-reuse.md](references/single-sourcing-and-reuse.md)

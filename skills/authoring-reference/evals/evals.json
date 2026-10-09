@@ -1,0 +1,78 @@
+{
+  "skill_name": "authoring-reference",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write the pull request description for this branch. The repository's template is at skills/authoring-reference/evals/files/pull_request_template.md. The branch carries three commits: 'fix(reader): bound a single poll to one chunk', 'test(reader): cover the catch-up path', and 'docs(reader): record the rotation assumption'. It addresses issue #214, whose acceptance criteria are all met.",
+      "expected_output": "A description using only the template's three sections, summarising the branch's current state, with a closing keyword for #214.",
+      "files": ["skills/authoring-reference/evals/files/pull_request_template.md"],
+      "expectations": [
+        "The output's headings are exactly Summary, Dependencies, and Linked issues",
+        "No heading appears in the output that is absent from the template",
+        "The Linked issues section uses a closing keyword for issue 214 rather than a bare reference",
+        "The Summary does not narrate the order in which the work happened"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "In skills/authoring-reference/evals/files/house_style_comments.cs, the ChunkBytes constant has no comment while the other two fields do. Add one.",
+      "expected_output": "A one or two line comment giving the reason for 8192, in the same shape as the neighbouring comments.",
+      "files": ["skills/authoring-reference/evals/files/house_style_comments.cs"],
+      "expectations": [
+        "The added comment is at most two lines, like both of its neighbours",
+        "The added comment does not restate the identifier name or the literal value as prose",
+        "The added comment contains no imperative directed at the reader",
+        "No other comment in the file is modified"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Review the acceptance criteria in skills/authoring-reference/evals/files/issue_with_bad_criteria.md and fix any that cannot be true on the day the issue closes.",
+      "expected_output": "The two criteria that depend on later events are moved out of Acceptance criteria; the two checkable ones remain.",
+      "files": ["skills/authoring-reference/evals/files/issue_with_bad_criteria.md"],
+      "expectations": [
+        "The criterion requiring a month of live operation is no longer under Acceptance criteria",
+        "The criterion depending on the admin UI follow-up is no longer under Acceptance criteria",
+        "Both relocated items appear under a Deliverables heading or an explicitly named follow-up",
+        "The two criteria about reading configuration and the 30-minute fallback remain under Acceptance criteria"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Write the commit message for the change in skills/authoring-reference/evals/files/staged_change.diff.",
+      "expected_output": "A conventional-commit subject plus a body stating why the bound exists and what it costs, with no file list.",
+      "files": ["skills/authoring-reference/evals/files/staged_change.diff"],
+      "expectations": [
+        "The subject line follows the type(scope): subject form and carries no trailing period",
+        "The body states why the change exists rather than what the diff shows",
+        "The body names a cost, limit, or trade the change accepts",
+        "The body contains no list of changed file paths",
+        "The body contains no date, build number, or pipeline number"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Review the comments in skills/authoring-reference/evals/files/comments_to_review.cs. Remove any comment that adds nothing, and add one where a reader would need it.",
+      "expected_output": "The loop paraphrase is deleted and the regular expression gains a comment saying what it matches.",
+      "files": ["skills/authoring-reference/evals/files/comments_to_review.cs"],
+      "expectations": [
+        "The comment that paraphrases the loop is removed",
+        "A comment is added to the Timestamped regular expression",
+        "The added comment states what the pattern matches, including that it excludes lines whose text begins with a bracket",
+        "No comment is added that restates a method or field name"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Fix skills/authoring-reference/evals/files/getting_started.md.",
+      "expected_output": "A page holding one mode, leading with the install and init commands, with the history and architecture prose moved out.",
+      "files": ["skills/authoring-reference/evals/files/getting_started.md"],
+      "expectations": [
+        "The first instruction a reader can act on appears before any historical or architectural prose",
+        "The 2019 origin story is not present on the page",
+        "The output names where the removed background belongs rather than only deleting it",
+        "The install and init commands are both still present and unchanged"
+      ]
+    }
+  ]
+}

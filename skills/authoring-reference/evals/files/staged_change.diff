@@ -1,0 +1,27 @@
+diff --git a/src/Reader/ChatLogTailer.cs b/src/Reader/ChatLogTailer.cs
+index 1a2b3c4..5d6e7f8 100644
+--- a/src/Reader/ChatLogTailer.cs
++++ b/src/Reader/ChatLogTailer.cs
+@@ -22,9 +22,16 @@ public sealed class ChatLogTailer : IDisposable
+-    private const int ReadChunkBytes = 65536;
++    // A rotated file can grow by more than one chunk between polls, so the
++    // cap bounds a single poll rather than the whole catch-up.
++    private const int ReadChunkBytes = 8192;
++    private const int MaxChunksPerPoll = 1;
+
+     public IReadOnlyList<string> Poll()
+     {
+-        return ReadToEnd();
++        return ReadBounded(ReadChunkBytes * MaxChunksPerPoll);
+     }
+diff --git a/tests/Reader/ChatLogTailerTests.cs b/tests/Reader/ChatLogTailerTests.cs
+index 2b3c4d5..6e7f8a9 100644
+--- a/tests/Reader/ChatLogTailerTests.cs
++++ b/tests/Reader/ChatLogTailerTests.cs
+@@ -41,6 +41,22 @@ public class ChatLogTailerTests
++    [Fact]
++    public void A_poll_reads_at_most_one_chunk_however_much_arrived()
++    {
++        // 1 MB written between polls; the poll must not block on all of it.
++        ...
++    }

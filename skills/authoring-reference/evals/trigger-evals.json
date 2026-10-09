@@ -1,0 +1,22 @@
+[
+  {"query": "Write the commit message for what I've just staged.", "should_trigger": true},
+  {"query": "We found a bug in the retry path — write it up as an issue.", "should_trigger": true},
+  {"query": "Draft the PR description for this branch.", "should_trigger": true},
+  {"query": "Add a comment above this regex explaining what it matches.", "should_trigger": true},
+  {"query": "Go through this diff and leave review comments where it needs changing.", "should_trigger": true},
+  {"query": "This README has grown into a mess. Restructure it.", "should_trigger": true},
+  {"query": "Turn these notes into an architecture decision record.", "should_trigger": true},
+  {"query": "Our getting-started page keeps drifting into background theory. Fix it.", "should_trigger": true},
+  {"query": "Write the runbook for failing the database over to the replica.", "should_trigger": true},
+  {"query": "The acceptance criteria on this ticket can't be verified at close. Rewrite them.", "should_trigger": true},
+  {"query": "What does Diataxis mean?", "should_trigger": false},
+  {"query": "Run markdownlint across docs/ and fix whatever it reports.", "should_trigger": false},
+  {"query": "Read the README and tell me how to install this thing.", "should_trigger": false},
+  {"query": "Summarise what this function does so I can follow the call path.", "should_trigger": false},
+  {"query": "Generate the API reference pages from the OpenAPI spec.", "should_trigger": false},
+  {"query": "Rename these variables so the code explains itself without comments.", "should_trigger": false},
+  {"query": "Write a script that counts the words in every file under docs/.", "should_trigger": false},
+  {"query": "Translate the README into Japanese.", "should_trigger": false},
+  {"query": "Bump the version in plugin.json and tag the release.", "should_trigger": false},
+  {"query": "Which style guide does Google publish for developers?", "should_trigger": false}
+]

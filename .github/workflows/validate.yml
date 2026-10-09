@@ -61,4 +61,29 @@ jobs:
           done
           [ "${fail}" -eq 0 ] && echo "OK: agents valid"
           exit "${fail}"
+
+      # Three surfaces claim which artifacts this plugin covers, and only
+      # templates-and-checklists.md carries the skeletons - so it is the source
+      # and the others must agree. Its "(no mode)" headings are the short-form
+      # set. The agent description is excluded on purpose: it says what to
+      # delegate, and nobody delegates a commit message. Each surface is
+      # flattened before matching because prose wraps, and a name split across
+      # two lines would fail the check on formatting rather than on content.
+      - name: Validate the short-form artifact list agrees across surfaces
+        run: |
+          set -Eeuo pipefail
+          templates=skills/authoring-reference/references/templates-and-checklists.md
+          fail=0
+          flatten() { tr '\n' ' ' < "$1" | tr -s ' '; }
+          while IFS= read -r artifact; do
+            for surface in skills/authoring-reference/SKILL.md README.md; do
+              flatten "${surface}" | grep -qiF "${artifact}" ||
+                { echo "FAIL ${surface}: does not name '${artifact}'"; fail=1; }
+            done
+            jq -e --arg a "${artifact}" '.description | ascii_downcase | contains($a)' \
+              .claude-plugin/plugin.json >/dev/null ||
+              { echo "FAIL plugin.json: description does not name '${artifact}'"; fail=1; }
+          done < <(sed -nE 's/^## (.+) \(no mode\)$/\1/p' "${templates}" | tr '[:upper:]' '[:lower:]')
+          [ "${fail}" -eq 0 ] && echo "OK: short-form artifacts agree across surfaces"
+          exit "${fail}"
 ...
