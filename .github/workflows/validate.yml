@@ -1,6 +1,6 @@
 ---
 # Structural validation of the plugin + skill on every PR/push. Dependency-light
-# (jq + bash only) so it always runs; mirrors what `claude plugin validate
+# (jq, bash and the runner's python3) so it always runs; mirrors what `claude plugin validate
 # --strict` and `skills-ref validate` check (manifest validity, skill/agent
 # frontmatter, skill name == directory name). Run those two tools locally for
 # the authoritative check.
@@ -61,6 +61,14 @@ jobs:
           done
           [ "${fail}" -eq 0 ] && echo "OK: agents valid"
           exit "${fail}"
+
+      # The self-test reads the live references, so renaming a checklist
+      # heading fails here rather than silently disarming the gate.
+      - name: Validate the short-form gate hook
+        run: |
+          set -Eeuo pipefail
+          jq -e '.hooks.PreToolUse | length > 0' hooks/hooks.json >/dev/null
+          python3 hooks/short_form_gate.py --self-test
 
       # Three surfaces claim which artifacts this plugin covers, and only
       # templates-and-checklists.md carries the skeletons - so it is the source
