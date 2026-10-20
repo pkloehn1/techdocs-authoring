@@ -4,6 +4,20 @@ All notable changes to this plugin are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project
 adheres to [Semantic Versioning](https://semver.org).
 
+## [0.4.0](https://github.com/pkloehn1/techdocs-authoring/compare/v0.3.1...v0.4.0) (2026-10-20)
+
+
+### Features
+
+* **hooks:** hold the first short-form write of a session against its checklist ([7a5d507](https://github.com/pkloehn1/techdocs-authoring/commit/7a5d50795614d8e881be81dd29b06840300f9d69))
+* **hooks:** hold the first short-form write of a session against its checklist ([08de6b3](https://github.com/pkloehn1/techdocs-authoring/commit/08de6b36603a9c2290021ec8df5664319f8e01ae))
+
+
+### Documentation
+
+* **readme:** say what the short-form gate denies and how to turn it down ([77a91a9](https://github.com/pkloehn1/techdocs-authoring/commit/77a91a9a7b91ad94131b8c56e5fc85a1442727f4)), closes [#7](https://github.com/pkloehn1/techdocs-authoring/issues/7)
+* **skill:** tell the model a gate denial is the checklist arriving ([00cb5ed](https://github.com/pkloehn1/techdocs-authoring/commit/00cb5ed511c0df3993f8b66c6a58d16ac1b1ccff))
+
 ## [0.3.1](https://github.com/pkloehn1/techdocs-authoring/compare/v0.3.0...v0.3.1) (2026-10-09)
 
 
