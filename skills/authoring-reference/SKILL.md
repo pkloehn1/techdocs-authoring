@@ -45,6 +45,11 @@ So the moment to reach for this is *before* writing or amending, not after:
 name the artifact, then check the matching checklist. Already drafting without
 having done that? Stop and do it — one lookup now, or a rewrite later.
 
+In Claude Code, this plugin's hook holds that moment for the short-form
+artifacts: the first commit, issue, change request, or comment of a session is
+denied with its checklist as the reason. The denial is the lookup, not a fault.
+Check the draft against each line, revise, and send it again.
+
 - Pick a canonical style guide and the highest-agreement mechanical rules
   (voice, mechanics, screenshots/media) → [references/style-guide.md](references/style-guide.md)
 - The Diataxis four-mode model and how to choose one mode per page
