@@ -4,6 +4,21 @@ All notable changes to this plugin are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project
 adheres to [Semantic Versioning](https://semver.org).
 
+## [0.5.0](https://github.com/pkloehn1/techdocs-authoring/compare/v0.4.0...v0.5.0) (2026-10-22)
+
+
+### Features
+
+* **hooks:** hold Markdown edits to the repository's MD013 line length ([01289ae](https://github.com/pkloehn1/techdocs-authoring/commit/01289ae4eac4bcaba018a3b25a6a48dff106c0cc))
+* **hooks:** hold Markdown edits to the repository's MD013 line length ([fa7cb7a](https://github.com/pkloehn1/techdocs-authoring/commit/fa7cb7a35a66d616880d2c457c4ab11fc6695cd5))
+
+
+### Documentation
+
+* **readme:** say what the line-length gate checks and how to turn it down ([2398eb6](https://github.com/pkloehn1/techdocs-authoring/commit/2398eb6694eec5b9331ab4b191d3324f0cd23cfc))
+* **skill:** add the fix for an MD013 line-length finding ([50bf62d](https://github.com/pkloehn1/techdocs-authoring/commit/50bf62dcc5bdc0f7546cc8d40ba062b531d71702))
+* **skill:** tell the model a line-length denial carries its fix ([3fa50ce](https://github.com/pkloehn1/techdocs-authoring/commit/3fa50cea8bbcd6adeb8949e2d4e8a95b896e1bc4))
+
 ## [0.4.0](https://github.com/pkloehn1/techdocs-authoring/compare/v0.3.1...v0.4.0) (2026-10-20)
 
 
