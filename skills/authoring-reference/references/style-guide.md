@@ -52,6 +52,30 @@ readability target encode. If your repository already adopts those, this is the
 same baseline — not a competing one. Defer any numeric line- or sentence-length
 **limit** to your repo's lint configuration.
 
+## Fixing a line-length finding (MD013)
+
+markdownlint's MD013 (`line-length`) flags a line longer than the limit your
+repository sets. The fix is a line break in the right place, not a new limit.
+
+- **The repository owns the limit.** Read it from the repository's markdownlint
+  config. Never raise it, set `MD013: false`, or add an inline
+  `markdownlint-disable` comment to get a line through.
+- **Break prose at sentence boundaries: one sentence per line.** Markdown
+  renders consecutive lines as one paragraph, so the output does not change,
+  and a later edit to one sentence touches one line of the diff.
+- **A single sentence still over the limit is too long.** Split it at a clause
+  boundary into two sentences, or cut words (see Brevity above). Do not break
+  it mid-clause just to fit.
+- **Never reflow a table row or a code block.** A wrapped row breaks the table
+  and a wrapped code line changes the code. If the config checks them, shorten
+  the cell or the code, or move the long content out of the table.
+- **Leave a long URL whole.** By default MD013 allows a last word that starts
+  within the limit and runs past it. Put the link at the end of its line, on a
+  line of its own, or behind a reference-style link.
+- **Re-run the repository's own linter** (its pre-commit hook,
+  `markdownlint-cli2`, or MegaLinter) on the file, and commit only when it is
+  clean.
+
 ## Mechanical conventions (deterministic)
 
 - **Sentence case** for headings and titles — never Title Case.
