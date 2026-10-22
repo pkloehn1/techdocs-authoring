@@ -48,7 +48,11 @@ having done that? Stop and do it — one lookup now, or a rewrite later.
 In Claude Code, this plugin's hook holds that moment for the short-form
 artifacts: the first commit, issue, change request, or comment of a session is
 denied with its checklist as the reason. The denial is the lookup, not a fault.
-Check the draft against each line, revise, and send it again.
+Check the draft against each line, revise, and send it again. A second hook
+holds Markdown line length the same way: an edit that adds a line over the
+repository's MD013 limit is denied, and a markdownlint finding in tool output
+or a pasted prompt arrives with the fix from
+[references/style-guide.md](references/style-guide.md).
 
 - Pick a canonical style guide and the highest-agreement mechanical rules
   (voice, mechanics, screenshots/media) → [references/style-guide.md](references/style-guide.md)

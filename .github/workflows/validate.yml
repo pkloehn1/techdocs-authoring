@@ -70,6 +70,17 @@ jobs:
           jq -e '.hooks.PreToolUse | length > 0' hooks/hooks.json >/dev/null
           python3 hooks/short_form_gate.py --self-test
 
+      # Same contract: the self-test reads the live MD013 guidance section.
+      - name: Validate the Markdown line-length gate hook
+        run: |
+          set -Eeuo pipefail
+          for event in PreToolUse PostToolUse PostToolUseFailure UserPromptSubmit; do
+            jq -e --arg e "${event}" \
+              '[.hooks[$e][]?.hooks[]?.command | select(contains("markdown_lint_gate.py"))] | length == 1' \
+              hooks/hooks.json >/dev/null || { echo "FAIL hooks.json: ${event} does not run markdown_lint_gate.py"; exit 1; }
+          done
+          python3 hooks/markdown_lint_gate.py --self-test
+
       # Three surfaces claim which artifacts this plugin covers, and only
       # templates-and-checklists.md carries the skeletons - so it is the source
       # and the others must agree. Its "(no mode)" headings are the short-form
